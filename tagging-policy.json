@@ -1,0 +1,27 @@
+{
+    "properties": {
+      "displayName": "tagging-policy",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "Ensures all indexed resources have tags and deny deployment if they do not.",
+      "metadata": {
+        "createdBy": "c309b7d3-f5b4-4ddb-8c86-52903c3b4256",
+        "createdOn": "2021-03-29T08:58:15.7286816Z",
+        "updatedBy": null,
+        "updatedOn": null
+      },
+      "parameters": {},
+      "policyRule": {
+        "if": {
+          "value": "[length(field('tags'))]",
+          "equals": "0"
+        },
+        "then": {
+          "effect": "deny"
+        }
+      }
+    },
+    "id": "/subscriptions/97611a69-5c41-4bc6-9223-8935ff090bd2/providers/Microsoft.Authorization/policyDefinitions/0e05da96-b013-423f-96b1-21a5bbafb6e2",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "0e05da96-b013-423f-96b1-21a5bbafb6e2"
+  }
